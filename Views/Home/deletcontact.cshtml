@@ -1,0 +1,13 @@
+﻿@model ContactUs
+<center>
+<h1 style="align-content:center;color:black"class=""> Delete Page</h1>
+
+<p>@Model.Name</p><br />
+<p>@Model.Email</p><br />
+<p>@Model.Subject</p><br />
+<p>@Model.Message</p><br />
+<div>
+<a class="btn btn-danger" asp-action="savedeletecontact" asp-route-id="@Model.Id">Are you sure to delete</a>
+    <a class="btn btn-success" asp-action="Messages">Back to Messages</a>
+    </div>
+</center>

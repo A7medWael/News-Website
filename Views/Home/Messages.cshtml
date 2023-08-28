@@ -1,0 +1,42 @@
+﻿@model List<ContactUs>
+<section id="testimonials" class="testimonials">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>اراء المستخدمين</h2>
+            <p></p>
+        </div>
+        <center>
+
+        @foreach(var c in Model)
+        {
+            <div class="owl-item cloned col-4" >
+                    
+                        
+                    
+                  
+                    
+                    <div class="testimonial-item">
+                        <p style="font-size:30px">@c.Subject</p>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                           @c.Message
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="../assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                        <h3>@c.Name</h3>
+                        <h4 >@c.Email</h4><hr>
+                        <a class="btn btn-danger" href="/Home/updatecont/@c.Id">Edit</a>
+                        <a class="btn btn-danger" asp-action="deletcontact" asp-route-id="@c.Id">Delete</a><hr>
+                    </div>
+                    
+                </div>
+
+                }
+        </center>
+            
+       
+      
+    </div>
+   
+</section>

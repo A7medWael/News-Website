@@ -1,0 +1,33 @@
+﻿@model List< News>
+<section id="about" class="about">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2> الاخبار @ViewData["Name"]</h2>
+        </div>
+        <center>
+        <div class="row" style="margin:30%">
+        @foreach(var n in Model)
+         {
+
+            
+            <div class="col-12">
+                <img src="~/assets/img/about.jpg" class="img-fluid" style="height:300px;width:300px;border-radius:50%" alt="">
+            </div>
+            <div class="col-sm-12">
+                <h3>@n.Title</h3>
+                <h4>@n.Date</h4>
+                <p class="fst-italic">
+                    @n.Topic
+                </p>    
+            </div>
+            <center>
+                        <a class="btn btn-danger" href="/Home/deleteNew/@n.Id">Delete</a>
+            </center>
+              } 
+        </div>
+        </center>
+        <hr />
+        
+    </div>
+</section>
